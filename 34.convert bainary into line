@@ -1,0 +1,13 @@
+class Solution {
+    public int getDecimalValue(ListNode head) {
+        int result = 0;
+        
+        while (head != null) {
+            // Shift left by 1 bit (multiply by 2) and add current node's bit
+            result = (result << 1) | head.val;
+            head = head.next;
+        }
+        
+        return result;
+    }
+}
